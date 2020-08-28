@@ -1,0 +1,42 @@
+﻿/*
+ * Author: Madison Burch
+ * Class name: ThugsTBone.cs
+ * Purpose: Class used to represent thugs t-bone entree
+ */
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Data.Entrees
+{
+    public class ThugsTBone
+    {
+        /// <summary>
+        /// gets thugs t-bone price
+        /// </summary>
+        public double Price => 6.44;
+        /// <summary>
+        /// gets calories for thugs t-bone
+        /// </summary>
+        public uint Calories => 982;
+        /// <summary>
+        /// gets list of special instructions
+        /// </summary>
+        public List<string> SpecialInstructions
+        {
+            get
+            {
+                List<string> instructions = new List<string>();
+                return instructions;
+            }
+        }
+        /// <summary>
+        /// overrides toString method
+        /// </summary>
+        /// <returns>name of entree</returns>
+        public override string ToString()
+        {
+            return "Thugs T-Bone";
+        }
+    }
+}
