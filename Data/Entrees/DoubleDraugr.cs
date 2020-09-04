@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Entrees
+namespace BleakwindBuffet.Data.Entrees
 {
     public class DoubleDraugr
     {
@@ -61,7 +61,7 @@ namespace Data.Entrees
                 List<string> instructions = new List<string>();
                 if (!Bun) instructions.Add("Hold bun");
                 if (!Ketchup) instructions.Add("Hold ketchup");
-                if (!Mustard) instructions.Add("Hold ketchup");
+                if (!Mustard) instructions.Add("Hold mustard");
                 if (!Pickle) instructions.Add("Hold pickle");
                 if (!Cheese) instructions.Add("Hold cheese");
                 if (!Tomato) instructions.Add("Hold tomato");

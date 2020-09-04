@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Sides
+namespace BleakwindBuffet.Data.Sides
 {
     public class VokunSalad
     {
@@ -71,6 +71,17 @@ namespace Data.Sides
             set
             {
                 size = value;
+            }
+        }
+        /// <summary>
+        /// gets list of special instructions
+        /// </summary>
+        public List<string> SpecialInstructions
+        {
+            get
+            {
+                List<string> instructions = new List<string>();
+                return instructions;
             }
         }
         /// <summary>
