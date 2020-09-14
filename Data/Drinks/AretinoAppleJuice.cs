@@ -10,21 +10,21 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink
     {
         /// <summary>
         /// gets aretino apple juice price
         /// </summary>
         private double price;
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     price = .62;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     price = .87;
                 }
@@ -39,15 +39,15 @@ namespace BleakwindBuffet.Data.Drinks
         /// gets calories for aretino apple juice
         /// </summary>
         private uint calories;
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     calories = 44;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     calories = 88;
                 }
@@ -63,24 +63,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         public bool Ice { get; set; }
         /// <summary>
-        /// get/set size option
-        /// </summary>
-        private Size size = Size.Small;
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-        /// <summary>
         /// gets list of special instructions
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -95,7 +80,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>name of drink</returns>
         public override string ToString()
         {
-            return size.ToString() + " Aretino Apple Juice";
+            return Size.ToString() + " Aretino Apple Juice";
         }
     }
 }

@@ -9,16 +9,16 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class SmokehouseSkeleton
+    public class SmokehouseSkeleton: Entree
     {
         /// <summary>
         /// gets smokehouse skeleton price
         /// </summary>
-        public double Price => 5.62;
+        public override double Price => 5.62;
         /// <summary>
         /// gets calories for smokehouse skeleton
         /// </summary>
-        public uint Calories => 602;
+        public override uint Calories => 602;
         /// <summary>
         /// get/set sausage or no sausage
         /// </summary>
@@ -38,7 +38,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// gets list of special instructions
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -10,21 +10,21 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class FriedMiraak
+    public class FriedMiraak:Side
     {
         /// <summary>
         /// gets fried miraak price
         /// </summary>
         private double price;
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     price = 1.78;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     price = 2.01;
                 }
@@ -39,15 +39,15 @@ namespace BleakwindBuffet.Data.Sides
         /// gets calories for fried miraak
         /// </summary>
         private uint calories;
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     calories = 151;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     calories = 236;
                 }
@@ -59,24 +59,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
         /// <summary>
-        /// get/set size option
-        /// </summary>
-        private Size size = Size.Small;
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-        /// <summary>
         /// gets list of special instructions
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -90,7 +75,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns>name of side</returns>
         public override string ToString()
         {
-            return size.ToString() + " Fried Miraak";
+            return Size.ToString() + " Fried Miraak";
         }
     }
 }

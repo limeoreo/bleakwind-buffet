@@ -9,16 +9,16 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class BriarheartBurger
+    public class BriarheartBurger:Entree
     {
         /// <summary>
         /// gets burger price
         /// </summary>
-        public double Price => 6.32;
+        public override double Price => 6.32;
         /// <summary>
         /// gets calories for burger
         /// </summary>
-        public uint Calories => 743;
+        public override uint Calories => 743;
         /// <summary>
         /// get/set bun or no bun
         /// </summary>
@@ -42,7 +42,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// gets list of special instructions
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -10,21 +10,21 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class VokunSalad
+    public class VokunSalad:Side
     {
         /// <summary>
         /// gets vokun salad price
         /// </summary>
         private double price;
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     price = .93;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     price = 1.28;
                 }
@@ -39,15 +39,15 @@ namespace BleakwindBuffet.Data.Sides
         /// gets calories for vokun salad
         /// </summary>
         private uint calories;
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     calories = 41;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     calories = 52;
                 }
@@ -59,24 +59,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
         /// <summary>
-        /// get/set size option
-        /// </summary>
-        private Size size = Size.Small;
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-        /// <summary>
         /// gets list of special instructions
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -90,7 +75,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns>name of side</returns>
         public override string ToString()
         {
-            return size.ToString() + " Vokun Salad";
+            return Size.ToString() + " Vokun Salad";
         }
     }
 }

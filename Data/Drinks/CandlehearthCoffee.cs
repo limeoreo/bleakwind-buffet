@@ -10,21 +10,21 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class CandlehearthCoffee
+    public class CandlehearthCoffee: Drink
     {
         /// <summary>
         /// gets coffee price
         /// </summary>
         private double price;
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     price = .75;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     price = 1.25;
                 }
@@ -39,15 +39,15 @@ namespace BleakwindBuffet.Data.Drinks
         /// gets calories for coffee
         /// </summary>
         private uint calories;
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     calories = 7;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     calories = 10;
                 }
@@ -71,24 +71,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         public bool Decaf { get; set; }
         /// <summary>
-        /// get/set size option
-        /// </summary>
-        private Size size = Size.Small;
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-        /// <summary>
         /// gets list of special instructions
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -106,11 +91,11 @@ namespace BleakwindBuffet.Data.Drinks
         {
             if (Decaf)
             {
-                return size.ToString() + " Decaf Candlehearth Coffee";
+                return Size.ToString() + " Decaf Candlehearth Coffee";
             }
             else
             {
-                return size.ToString() + " Candlehearth Coffee";
+                return Size.ToString() + " Candlehearth Coffee";
             }
         }
     }
