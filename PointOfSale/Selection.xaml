@@ -13,7 +13,7 @@
             <Setter Property="FontSize" Value="15"/>
         </Style>
         <Style TargetType="TextBlock">
-            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Margin" Value="3"/>
         </Style>
     </UserControl.Resources>
     <Grid>

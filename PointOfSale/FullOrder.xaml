@@ -6,9 +6,32 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="250">
-    <DockPanel>
-        <TextBox DockPanel.Dock="Top" FontWeight="Bold" TextAlignment="Center" FontSize="18">
-            Order #001
-        </TextBox>
-    </DockPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock  FontWeight="Bold" TextAlignment="Center" FontSize="18">
+            Full Order
+        </TextBlock>
+        <ListBox Grid.Row="1">
+            
+        </ListBox>
+        <TextBlock Grid.Row="2"  TextAlignment="Left" FontSize="15">
+            Subtotal:
+        </TextBlock>
+        <TextBlock Grid.Row="3"  TextAlignment="Left" FontSize="15">
+            Tax:
+        </TextBlock>
+        <TextBlock Grid.Row="4"  TextAlignment="Left" FontSize="15">
+            Total:
+        </TextBlock>
+        <local:CompleteCancel Grid.Row="5">
+            
+        </local:CompleteCancel>
+    </Grid>
 </UserControl>
