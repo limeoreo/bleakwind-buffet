@@ -13,9 +13,13 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <local:Selection >
-            
-        </local:Selection>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <local:Selection Grid.ColumnSpan="3" Margin="5" BorderThickness="2" BorderBrush="Black" />
+        <local:FullMenu Grid.Column="3" Margin="5" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="2"/>
+
     </Grid>
     
 </Window>
