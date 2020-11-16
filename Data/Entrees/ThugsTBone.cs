@@ -15,6 +15,13 @@ namespace BleakwindBuffet.Data.Entrees
         /// gets thugs t-bone price
         /// </summary>
         public override double Price => 6.44;
+        public override string Description
+        {
+            get
+            {
+                return ("Juicy T-Bone, not much else to say.");
+            }
+        }
         /// <summary>
         /// gets calories for thugs t-bone
         /// </summary>

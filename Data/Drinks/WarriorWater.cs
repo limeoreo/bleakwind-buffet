@@ -16,6 +16,13 @@ namespace BleakwindBuffet.Data.Drinks
         /// gets water price
         /// </summary>
         public override double Price => 0.00;
+        public override string Description
+        {
+            get
+            {
+                return ("It’s water. Just water.");
+            }
+        }
         /// <summary>
         /// gets calories for water
         /// </summary>

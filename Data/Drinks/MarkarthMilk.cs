@@ -35,6 +35,13 @@ namespace BleakwindBuffet.Data.Drinks
                 return price;
             }
         }
+        public override string Description
+        {
+            get
+            {
+                return ("Hormone-free organic 2% milk.");
+            }
+        }
         /// <summary>
         /// gets calories for markarth milk
         /// </summary>

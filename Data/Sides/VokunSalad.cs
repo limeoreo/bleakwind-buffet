@@ -35,6 +35,13 @@ namespace BleakwindBuffet.Data.Sides
                 return price;
             }
         }
+        public override string Description
+        {
+            get
+            {
+                return ("A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.");
+            }
+        }
         /// <summary>
         /// gets calories for vokun salad
         /// </summary>

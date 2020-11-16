@@ -12,6 +12,7 @@ namespace BleakwindBuffet.Data.Drinks
 {
     public class AretinoAppleJuice : Drink
     {
+
         /// <summary>
         /// gets aretino apple juice price
         /// </summary>
@@ -62,6 +63,13 @@ namespace BleakwindBuffet.Data.Drinks
         /// get/set ice or no ice
         /// </summary>
         public bool Ice { get; set; }
+        public override string Description
+        {
+            get
+            {
+                return ("Fresh squeezed apple juice.");
+            }
+        }
         /// <summary>
         /// gets list of special instructions
         /// </summary>

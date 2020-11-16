@@ -35,6 +35,13 @@ namespace BleakwindBuffet.Data.Sides
                 return price;
             }
         }
+        public override string Description
+        {
+            get
+            {
+                return ("Cheesey Grits.");
+            }
+        }
         /// <summary>
         /// gets calories for mad otar grits
         /// </summary>

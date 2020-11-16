@@ -16,6 +16,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// gets coffee price
         /// </summary>
         private double price;
+        
         public override double Price
         {
             get
@@ -33,6 +34,13 @@ namespace BleakwindBuffet.Data.Drinks
                     price = 1.75;
                 }
                 return price;
+            }
+        }
+        public override string Description
+        {
+            get
+            {
+                return ("Fair trade, fresh ground dark roast coffee.");
             }
         }
         /// <summary>

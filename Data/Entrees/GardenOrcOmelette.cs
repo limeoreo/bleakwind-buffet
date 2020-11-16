@@ -15,6 +15,13 @@ namespace BleakwindBuffet.Data.Entrees
         /// gets garden orc omelette price
         /// </summary>
         public override double Price => 4.57;
+        public override string Description
+        {
+            get
+            {
+                return ("Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.");
+            }
+        }
         /// <summary>
         /// gets calories for garden orc omelette
         /// </summary>

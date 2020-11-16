@@ -15,6 +15,13 @@ namespace BleakwindBuffet.Data.Entrees
         /// gets philly poacher price
         /// </summary>
         public override double Price =>7.23;
+        public override string Description
+        {
+            get
+            {
+                return ("Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.");
+            }
+        }
         /// <summary>
         /// gets calories for philly poacher
         /// </summary>

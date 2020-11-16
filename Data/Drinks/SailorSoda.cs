@@ -35,6 +35,13 @@ namespace BleakwindBuffet.Data.Drinks
                 return price;
             }
         }
+        public override string Description
+        {
+            get
+            {
+                return ("An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice.");
+            }
+        }
         /// <summary>
         /// gets calories for sailor soda
         /// </summary>

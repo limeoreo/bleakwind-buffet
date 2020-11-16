@@ -15,6 +15,13 @@ namespace BleakwindBuffet.Data.Entrees
         /// gets burger price
         /// </summary>
         public override double Price => 6.32;
+        public override string Description
+        {
+            get
+            {
+                return ("Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.");
+            }
+        }
         /// <summary>
         /// gets calories for burger
         /// </summary>

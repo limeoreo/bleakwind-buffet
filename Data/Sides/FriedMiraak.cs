@@ -35,6 +35,13 @@ namespace BleakwindBuffet.Data.Sides
                 return price;
             }
         }
+        public override string Description
+        {
+            get
+            {
+                return ("Perfectly prepared hash brown pancakes.");
+            }
+        }
         /// <summary>
         /// gets calories for fried miraak
         /// </summary>
