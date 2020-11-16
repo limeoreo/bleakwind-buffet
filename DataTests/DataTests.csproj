@@ -19,8 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj" />
-    <ProjectReference Include="..\PointOfSale\PointOfSale.csproj" />
-    <ProjectReference Include="..\Website\Website.csproj" />
   </ItemGroup>
 
 </Project>
