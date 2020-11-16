@@ -188,19 +188,22 @@ namespace BleakwindBuffet.Data
         }
 
         private static IEnumerable<IOrderItem> allItems = FullMenu();
-        public static IEnumerable<IOrderItem> Search(string terms)
+        /*public static IEnumerable<IOrderItem> Search(string terms)
         {
             List<IOrderItem> results = new List<IOrderItem>();
             if (terms == null) return allItems;
-            foreach(IOrderItem item in allItems)
+            else
             {
-                if (item.ToString().Contains(terms))
+                foreach(IOrderItem item in allItems)
                 {
-                    results.Add(item);
+                    if (item.ToString().Contains(terms))
+                    {
+                        results.Add(item);
+                    }
                 }
             }
             return results;
-        }
+        }*/
         public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, int? min, int? max)
         {
             if (min == null && max == null) return items;
@@ -268,7 +271,7 @@ namespace BleakwindBuffet.Data
             }
             return results;
         }
-        public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> items, IEnumerable<string> categories)
+        /*public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> items, IEnumerable<string> categories)
         {
             // If no filter is specified, just return the provided collection
             if (categories == null || categories.Count() == 0) return items;
@@ -290,6 +293,6 @@ namespace BleakwindBuffet.Data
                 }
             }
             return results;
-        }
+        }*/
     }
 }

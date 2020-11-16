@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj" />
+    <Compile Remove="SideOp\**" />
+    <EmbeddedResource Remove="SideOp\**" />
+    <None Remove="SideOp\**" />
+    <Page Remove="SideOp\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="SideOp\" />
+    <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 
 </Project>

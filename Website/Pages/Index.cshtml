@@ -27,15 +27,15 @@
 
         <h4>Category</h4>
         <label>
-            <input type="checkbox" name="Categories" value="drinks" />
+            <input type="checkbox" name="Categories" value="drinks" checked="@Model.Categories.Contains("drinks")" />
             drinks
         </label>
         <label>
-            <input type="checkbox" name="Categories" value="entrees" />
+            <input type="checkbox" name="Categories" value="entrees" checked="@Model.Categories.Contains("entrees")"/>
             entrees
         </label>
         <label>
-            <input type="checkbox" name="Categories" value="sides" />
+            <input type="checkbox" name="Categories" value="sides" checked="@Model.Categories.Contains("sides")"/>
             sides
         </label>
 
@@ -67,6 +67,7 @@
                         <h3 class="item-name">@item.ToString()</h3>
                         <div class="item-calories">@item.Calories</div>
                         <div class="item-price">@item.Price</div>
+                        <div class="item-description">@item.Description</div>
                     </div>
                 </li>
             }
