@@ -186,5 +186,110 @@ namespace BleakwindBuffet.Data
             IEnumerable<IOrderItem> allItems = es.Concat(Drinks());
             return allItems;
         }
+
+        private static IEnumerable<IOrderItem> allItems = FullMenu();
+        public static IEnumerable<IOrderItem> Search(string terms)
+        {
+            List<IOrderItem> results = new List<IOrderItem>();
+            if (terms == null) return allItems;
+            foreach(IOrderItem item in allItems)
+            {
+                if (item.ToString().Contains(terms))
+                {
+                    results.Add(item);
+                }
+            }
+            return results;
+        }
+        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, int? min, int? max)
+        {
+            if (min == null && max == null) return items;
+            var results = new List<IOrderItem>();
+
+            // only a maximum specified
+            if (min == null)
+            {
+                foreach (IOrderItem item in items)
+                {
+                    if (item.Calories <= max) results.Add(item);
+                }
+                return results;
+            }
+            // only a minimum specified
+            if (max == null)
+            {
+                foreach (IOrderItem item in items)
+                {
+                    if (item.Calories >= min) results.Add(item);
+                }
+                return results;
+            }
+            // Both minimum and maximum specified
+            foreach (IOrderItem item in items)
+            {
+                if (item.Calories >= min && item.Calories <= max)
+                {
+                    results.Add(item);
+                }
+            }
+            return results;
+        }
+
+        public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> items, double? min, double? max)
+        {
+            if (min == null && max == null) return items;
+            var results = new List<IOrderItem>();
+
+            // only a maximum specified
+            if (min == null)
+            {
+                foreach (IOrderItem item in items)
+                {
+                    if (item.Price <= max) results.Add(item);
+                }
+                return results;
+            }
+            // only a minimum specified
+            if (max == null)
+            {
+                foreach (IOrderItem item in items)
+                {
+                    if (item.Price >= min) results.Add(item);
+                }
+                return results;
+            }
+            // Both minimum and maximum specified
+            foreach (IOrderItem item in items)
+            {
+                if (item.Price >= min && item.Price <= max)
+                {
+                    results.Add(item);
+                }
+            }
+            return results;
+        }
+        public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> items, IEnumerable<string> categories)
+        {
+            // If no filter is specified, just return the provided collection
+            if (categories == null || categories.Count() == 0) return items;
+            // Filter the supplied collection of items
+            List<IOrderItem> results = new List<IOrderItem>();
+            foreach (IOrderItem item in items)
+            {
+                if (categories.Contains("drinks") && Drinks().Contains(item))
+                {
+                    results.Add(item);
+                }
+                else if (categories.Contains("entrees") && Entrees().Contains(item))
+                {
+                    results.Add(item);
+                }
+                else if (categories.Contains("sides") && Sides().Contains(item))
+                {
+                    results.Add(item);
+                }
+            }
+            return results;
+        }
     }
 }
